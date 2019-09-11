@@ -1,2 +1,3 @@
 # idontknow
-just so so
+ok,i dont know 
+i dont know
