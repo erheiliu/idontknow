@@ -8,7 +8,7 @@ using std::cout;
 using std::endl;
 using std::srand;
 using std::rand;
-
+ 
 void get(char *key,int i,int j,int k,int &lower,int &higher){
 	int low=k;
 	int high=k;
@@ -38,7 +38,7 @@ int main(){
 		get(p,0,1,k,lower,higher);
 		k+=1;
 	}
-
+	cout<<"hello world";
 	cout<<"scope:"<<lower<<" "<<higher;
 	//delete[] ch;
 	cin.get();
