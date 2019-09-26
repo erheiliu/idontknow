@@ -32,9 +32,7 @@ int main(){
 		if(temp>result){
 			result=temp;
 		}
-		else{
-			break;
-		}
+		else break;
 	}
 	cout<<result;
 	cin.get();
