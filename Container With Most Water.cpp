@@ -21,15 +21,22 @@ inline int biger(int a,int b) {return (a<b)? b:a;}
 
 int main(){
 	int a[9]={1,8,6,2,5,4,8,3,7};
-	int total=0;
-	const int size=sizeof(a)/sizeof(int);
-	for(int i=0;i<size;++i){
-		for(int j=i+1;j<size;++j){
-			int temp=(j-i)*less(a[i],a[j]);
-			total=biger(temp,total);
+	int i=0;
+	int j=(sizeof(a)/sizeof(int)-1);
+	int result=(j-i)*less(a[i],a[j]);
+	while(i<j){
+		if(less(a[i],a[j])==a[i]) ++i;
+		else if(less(a[i],a[j])==a[j]) --j;
+		if(i==j) break;
+		int temp=(j-i)*less(a[i],a[j]);
+		if(temp>result){
+			result=temp;
+		}
+		else{
+			break;
 		}
 	}
-	cout<<total;
+	cout<<result;
 	cin.get();
 	cin.get();
 	return 0;
