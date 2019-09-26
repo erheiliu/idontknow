@@ -24,7 +24,7 @@ int main(){
 	double temp=(double)s.size()/(2*line-2);
 	cout<<temp<<endl;
 	int row=ceil(temp);
-	cout<<"数组数量："<<row<<endl;
+	cout<<"row numbers:"<<row<<endl;
 	char** p=new char*[row];
 	for(int i=0;i<row;++i){
 		*(p+i)=new char[2*line-2];
