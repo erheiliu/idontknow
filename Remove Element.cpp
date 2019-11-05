@@ -29,33 +29,25 @@ using std::sort;
 int main(){
 	vector<int> nums;
 	int val=3;
-	nums.push_back(3);
+	//nums.push_back(3);
+	//nums.push_back(3);
 	nums.push_back(3);
 	nums.push_back(2);
-	//nums.push_back(3);
-	if(nums.size()<2) {
-		cout<<nums.size();
-		cin.get();
-	    return nums.size();
+	nums.push_back(3);
+	if(nums.size()==1&&nums[0]!=val){
+		cout<<1;
+		return 1;
 	}
-	int i=0;int j=NULL;
-	for(i=0;i<nums.size();++i){
+	int i=0;int j=nums.size()-1;
+
+	while(i<=j){
 		if(nums[i]==val){
-			j=i+1;
-			break;
-		}
+			nums[i]=nums[j];
+			nums[j]=val;
+			j--;
+		}else ++i;
 	}
-	if(i==nums.size()) return nums.size();
-	while(j<nums.size()){
-		if(nums[j]==val) j++;
-		else{
-			int temp=nums[j];
-			nums[j]=nums[i];
-			nums[i]=temp;
-			i++;
-			j++;
-		}
-	}
+	cout<<'i'<<i<<endl;
 	for(int k=0;k<i;++k){
 		cout<<nums[k]<<endl;
 	}
