@@ -36,7 +36,7 @@ void dfs(vector<vector<int>> &result,vector<int> &candidates,vector<int> temp,in
 			dfs(result,candidates,temp,target,i+1,total+temp.back());
 		}
 		temp.pop_back();
-		while(i+2<candidates.size()&&candidates[i]==candidates[i+1]) ++i;
+		while(i+1<candidates.size()&&candidates[i]==candidates[i+1]) ++i;
 	}
 }
 int main(){
