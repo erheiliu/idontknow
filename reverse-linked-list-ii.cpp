@@ -60,13 +60,11 @@ int main(){
 
 	node* move=p1->next;
 	node* temp=nullptr;
-	node* temp1=nullptr;
 	for(int i=0;i<n-m;++i){
 		temp=p1->next;
-		temp1=move->next->next;
 		p1->next=move->next;
+		move->next=move->next->next;
 		p1->next->next=temp;
-		move->next=temp1;
 	}
 
 	head=dummyhead->next;
